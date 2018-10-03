@@ -1,0 +1,15 @@
+Nous avons commencé par la création d'un wireframe
+Tout de suite on s'est penché sur l'intégration de la maquette en gérant seulement le HTML et le CSS (rien de fonctionnel, pas de PHP pour le moment)
+Pour cela nous avons utilisé Bootstrap 3.3.7
+Nous avons créer 3div:
+	-Une principale qui regroupe tout le travail
+	-Une pour le titre du projet
+	-Une pour l'affichage des dossiers tout à gauche
+	-Et enfin une div pour l'exploration des fichiers à droite
+Avec auusi dans la div pour l'exploration des fichiers, un formulaire avec des boutons pour les fonctionnalités
+"Nouveau dossier"
+"Ouvrir
+"
+"Renommer"
+"Télécharger"
+"Supprimer"
