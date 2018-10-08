@@ -1,0 +1,56 @@
+body
+{
+    background-color: #fff;
+    overflow: hidden;
+}
+
+/* Titre contenu */
+.contenu
+{
+    width: 80%;
+    height: 400;
+    margin-top: 20px;
+    text-align: center;
+    border: solid black;
+    color: aliceblue;
+    overflow: auto;
+}
+/* Fin contenu */
+/* Section titre */
+.section-titre
+{
+    text-align: center;
+    border: solid black;
+}
+.titre
+{
+    font-weight: bold;
+    font-size: 20px;
+    color: black;
+}
+/* Fin section titre */
+/* Section explorateur de fichier */
+.section-explorateur
+{
+    height: 500px;
+    border: solid black;
+    overflow: auto;
+}
+/* Fin section explorateur de fichier */
+/* Dossier */
+.dossier
+{
+    height: 500px;
+    border: solid black;
+    overflow: auto;
+    text-align: justify;
+}
+/* Fin dossier */
+/* Fonctionnalites */
+.fonctionnalite
+{
+   width: 20%;
+   height: 500px;
+   border: 2px solid black; 
+}
+/* Fin fonctionnalites */

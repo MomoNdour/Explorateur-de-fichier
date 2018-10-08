@@ -6,10 +6,17 @@ Nous avons créer 3div:
 	-Une pour le titre du projet
 	-Une pour l'affichage des dossiers tout à gauche
 	-Et enfin une div pour l'exploration des fichiers à droite
-Avec auusi dans la div pour l'exploration des fichiers, un formulaire avec des boutons pour les fonctionnalités
+Avec aussi dans la div pour l'exploration des fichiers, un formulaire avec des boutons pour les fonctionnalités
 "Nouveau dossier"
-"Ouvrir
-"
+"Ouvrir un fichier
+"-> fonction fopen
+"Fermer un fichier" -> fonction fclose
 "Renommer"
 "Télécharger"
-"Supprimer"
+"Supprimer" -> fonctions unlink et rmdir
+Autres fonctionnalités:
+"Création d'un dossier racine" -> fonction mkdir
+"Afficher le contenu d'un dossier" -> les fonctions opendir() et readdir().
+"Fermer un dossier" -> fonction closedir()
+-------------la fonction is_dir et is_file pour distinguer les dossiers et les fichiers
+
