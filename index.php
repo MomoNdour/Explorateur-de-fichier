@@ -44,7 +44,18 @@ foreach ($dirs as $dir) {
     }
 }
 }
+//Renommer
+if(isset($_GET['rename'])){
+    $rename = $_GET['rename'];
+} else {
+    $rename = "";
+}
 
+if(isset($_GET['newname'])){
+    if(is_dir($$racine . $_GET['exname']) || is_file($$racine . $_GET['exname'])){
+	@rename($$racine . $_GET['exname'], $$racine . $_GET['newname']);
+    }
+}
 
 ?>
 
@@ -95,16 +106,34 @@ foreach ($dirs as $dir) {
                                     <img src="images/supprimer.png" alt="" width="20px" height="20px">
                                 </button>
                                 </div><br>
+                            </form>
 
+                            <!--*********creation de nouveau fichier********-->
+                            <form method="POST" action="index.php">
                                 <div>
-                                <input type='text'style="color:black;" name='exname'/><input type='text' name='newname'/><br>
-                                <button type="submit" data-toggle="tooltip" title="Ajouter un fichier">
+                                <label for="exname" style="color:black;">Ancien nom</label><input type='text' style="color:black;" name='exname'/><br>
+                                <label for="newname" style="color:black;">Nouveau nom</label><input type='text' style="color:black;" name='newname'/><br>
+                                <button type="submit" data-toggle="tooltip" title="Renommer">
                                     <img src="images/renommer.png" alt="" width="20px" height="20px">
                                 </button>
                                 </div><br>
 
-
-                            </form>
+        <!--Creation fichier--><div>
+                                <input type="text" name="fichierr"  placeholder="Nouveau fichier">
+                                <input type="submit" name="validerr" value="Créer">
+                                </div><br>
+                              </form>
+                                    <?php
+                                    if (isset($_POST['validerr'])) {
+                                    if (file_exists($_POST['fichierr'])) {
+                                    echo "fichier existe";
+                                    }
+                                    else {
+                                    file_put_contents($_POST['fichierr'], ""); // crée un fichier vide nommé mon_fichier.txt
+                                    echo "fichier creer";
+                                    }
+                                    }
+                                    ?><br>
                         </div><!-- Fin des fonctionnalites -->
                     </div><!-- Fin section explorateur dossier -->
             </div><!-- Fin row -->
